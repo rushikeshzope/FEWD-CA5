@@ -1,0 +1,49 @@
+/* UniqueRegistrationForm.css */
+
+.unique-form-div {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .unique-register-header {
+    text-align: center;
+    color: #333;
+  }
+  
+  .unique-form-div label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .unique-form-div input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .unique-form-div button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .unique-form-div button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .unique-form-div button:hover {
+    background-color: #45a049;
+  }
+  

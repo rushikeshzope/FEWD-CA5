@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import KalviumLogo from "../assets/KalviumLogo.png"; 
+import KalviumLogo from "../assets/KalviumLogo.png";
+import RegistrationForm from "./RegisterForm";
 
 function BookList() {
   const [searchTerm, setSearchTerm] = useState('');
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [showForm,setshowForm] = useState(false);
 
   const handleSearch = (event) => setSearchTerm(event.target.value);
 
@@ -35,6 +37,10 @@ function BookList() {
     book.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const HandleClick = () => {
+    setshowForm(true);
+  }
+
   return (
     <div>
       <div className="header">
@@ -49,7 +55,7 @@ function BookList() {
             value={searchTerm}
             onChange={handleSearch}
           />
-          <button className="register-button">Register</button>
+          <button className="register-button" onClick={HandleClick}>Register</button>
         </div>
       </div>
       {loading ? <p>Loading books...</p> : (
@@ -63,6 +69,7 @@ function BookList() {
           ))}
         </ul>
       )}
+      {showForm ? <RegistrationForm /> : null}
     </div>
   );
 }
