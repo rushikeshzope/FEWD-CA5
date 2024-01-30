@@ -7,7 +7,7 @@ function BookList() {
   const [searchTerm, setSearchTerm] = useState('');
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [showForm,setshowForm] = useState(false);
+  const [showForm, setshowForm] = useState(false);
 
   const handleSearch = (event) => setSearchTerm(event.target.value);
 
@@ -40,12 +40,12 @@ function BookList() {
 
   const HandleClick = () => {
     setshowForm(true);
-  }
+  };
 
   return (
     <div>
       {showForm ? (
-        <Form />
+        <Form setshowForm={setshowForm} />
       ) : (
         <div>
           <div className="header">
@@ -76,10 +76,9 @@ function BookList() {
           )}
         </div>
       )}
-       {showForm ? <Form />: null}
-
     </div>
   );
 }
 
 export default BookList;
+
