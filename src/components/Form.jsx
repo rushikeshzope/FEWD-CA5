@@ -27,8 +27,8 @@ function Form() {
     <div className="app">
       {isSuccess ? (
         <div className={`success-message ${isElementVisible ? 'visible' : 'invisible'}`}>
-          <p>Successfully signed up!</p>
-          <button onClick={handleGoBack}>Go Back</button>
+          <p id='endmessage'>Successfully signed up!</p>
+          <button onClick={handleGoBack} id='gobackbutton'>Go Back</button>
         </div>
       ) : (
         <form className='form-container' onSubmit={handleSubmit(onSubmit)}>

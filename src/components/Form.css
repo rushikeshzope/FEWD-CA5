@@ -1,61 +1,105 @@
-    .app {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* height: 100vh; */
-    }
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
 
-    .form-container {
-        width: 300px;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin-top: 125px;
-    }
+.form-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 125px;
+}
 
-    .form-label {
-        display: block;
-        margin-bottom: 8px;
-    }
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+}
 
-    .form-input {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 16px;
-        box-sizing: border-box;
-    }
+.form-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
 
-    .error-text {
-        color: red;
-        margin-top: -10px;
-        margin-bottom: 16px;
-    }
+.error-text {
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 16px;
+}
 
-    .formbutton {
-        background-color: #4caf50;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 6vw;
-    }
+.formbutton {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 6vw;
+    transition: background-color 0.3s ease-in-out;
+}
 
-    .formbutton:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
-    }
+.formbutton:hover {
+    background-color: #2f7232; /* Change color on hover */
+}
 
-    .success-message {
-        color: #4caf50;
-        margin-bottom: 16px;
-    }
+.formbutton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
 
-    .success-message.visible {
-        display: block;
-    }
+.success-message {
+    color: #4caf50;
+    margin-bottom: 16px;
+}
 
-    .success-message.invisible {
-        display: none;
-    }
+.success-message.visible {
+    display: block;
+}
+
+.success-message.invisible {
+    display: none;
+}
+
+.success-message button {
+    background-color: #2f7232;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.success-message button:hover {
+    background-color: #1f5122;  
+}
+
+#gobackbutton{
+    background-color: #2f7232;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 360px;
+    transition: background-color 0.3s ease-in-out;
+    width: 300px;
+    height: 100px;
+}
+
+#gobackbutton button:hover {
+    background-color: #9ade9f; 
+}
+
+#endmessage{
+    font-size: 4em;
+    position: absolute;
+    top: 20%;
+    left: 28%;
+}
