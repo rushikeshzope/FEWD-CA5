@@ -26,7 +26,7 @@ function Form() {
   return (
     <div className="app">
       {isSuccess ? (
-       <div className={isElementVisible ? 'success-message visible' : 'success-message invisible'}>
+        <div className={`success-message ${isElementVisible ? 'visible' : 'invisible'}`}>
           <p>Successfully signed up!</p>
           <button onClick={handleGoBack}>Go Back</button>
         </div>
