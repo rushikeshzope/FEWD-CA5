@@ -1,6 +1,7 @@
+// BookList.jsx
 import React, { useState, useEffect } from "react";
 import KalviumLogo from "../assets/KalviumLogo.png";
-import RegistrationForm from "./RegisterForm";
+import Form from "./Form";
 
 function BookList() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -43,33 +44,40 @@ function BookList() {
 
   return (
     <div>
-      <div className="header">
-        <div className="logo-container">
-          <p id="kalvium-book">Kalvium Books</p>
-          <img src={KalviumLogo} alt="Kalvium Book Logo" className="logo" />
+      {showForm ? (
+        <Form />
+      ) : (
+        <div>
+          <div className="header">
+            <div className="logo-container">
+              <p id="kalvium-book">Kalvium Books</p>
+              <img src={KalviumLogo} alt="Kalvium Book Logo" className="logo" />
+            </div>
+            <div className="search-bar">
+              <input
+                type="text"
+                placeholder="Search books..."
+                value={searchTerm}
+                onChange={handleSearch}
+              />
+              <button className="register-button" onClick={HandleClick}>Register</button>
+            </div>
+          </div>
+          {loading ? <p>Loading books...</p> : (
+            <ul>
+              {filteredBooks.map(book => (
+                <li key={book.id}>
+                  {console.log(book)}
+                  <img src={book.imageLinks.smallThumbnail} alt={book.title} />
+                  <span>{book.title}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search books..."
-            value={searchTerm}
-            onChange={handleSearch}
-          />
-          <button className="register-button" onClick={HandleClick}>Register</button>
-        </div>
-      </div>
-      {loading ? <p>Loading books...</p> : (
-        <ul>
-          {filteredBooks.map(book => (
-            <li key={book.id}>
-              {console.log(book)}
-              <img src={book.imageLinks.smallThumbnail} alt={book.title} />
-              <span>{book.title}</span>
-            </li>
-          ))}
-        </ul>
       )}
-      {showForm ? <RegistrationForm /> : null}
+       {showForm ? <Form />: null}
+
     </div>
   );
 }
