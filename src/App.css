@@ -7,16 +7,16 @@ body {
 }
 
 .register-button {
-  padding: 10px;
-  font-size: 16px;
-  background-color: #2C3E50;
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #3498DB;
   color: #fff;
-  border: none;
+  border: none; 
   border-radius: 5px;
   cursor: pointer;
   outline: none;
   position: absolute;
-  top: 13px;
+  top: 20px;
   right: 100px;
   transition: background-color 0.3s ease-in-out;
 }
@@ -34,18 +34,30 @@ body {
 }
 
 .search-bar {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   position: relative;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 input {
-  padding: 10px;
+  padding: 15px;
   width: 70%;
   max-width: 500px;
   font-size: 18px;
-  margin-top: 10px;
-  border: 1px solid #34495E;
-  border-radius: 5px;
+  margin-top: 15px;
+  border: 2px solid #3498DB;
+  border-radius: 25px;
   outline: none;
   transition: border-color 0.3s ease-in-out;
   background-color: #2C3E50;
@@ -53,13 +65,14 @@ input {
 }
 
 input:focus {
-  border-color: #3498DB;
+  border-color: #0d68c3;
 }
 
 .header {
   position: relative;
   background-color: #3498DB;
-  padding: 20px 0;
+  padding: 40px 0;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .logo-container {
@@ -69,17 +82,17 @@ input:focus {
 #kalvium-book {
   position: absolute;
   left: 20px;
-  top: -5px;
-  font-size: 1.8em;
+  top: -8px;
+  font-size: 2em;
   color: #ECF0F1;
 }
 
 .logo {
   position: absolute;
-  height: 50px;
-  width: 50px;
-  left: 200px;
-  top: 17px;
+  height: 60px;
+  width: 60px;
+  left: 230px;
+  top: 13px;
   border-radius: 50%;
 }
 
@@ -89,40 +102,70 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  animation: fadeIn 1s ease-in-out;
 }
 
-li {
-  margin: 10px;
+.book-item {
+  margin: 15px;
   margin-top: 30px;
   text-align: center;
-  border: 1px solid #34495E;
-  border-radius: 8px;
+  border: 2px solid #3498DB;
+  border-radius: 15px;
   background-color: #ECF0F1;
-  box-shadow: 0 8px 16px rgba(52, 73, 94, 0.2);
+  box-shadow: 0 10px 20px rgba(52, 73, 94, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
-  width: 250px;
+  width: 300px;
   overflow: hidden;
   position: relative;
+  background-color: #3498DB;
+  animation: fadeIn 1s ease-in-out;
 }
 
-li:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(52, 73, 94, 0.3);
+.book-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(52, 73, 94, 0.3);
 }
 
-img {
+.img-container {
+  position: relative;
   width: 100%;
-  height: 300px; 
-  border-radius: 8px 8px 0 0;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  background-color: #34495E;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(52, 73, 94, 0.5), rgba(52, 73, 94, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.book-item:hover .img-overlay {
+  opacity: 1;
+}
+
+.img-container img {
+  width: 70%;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
 
+.book-item:hover img {
+  transform: scale(1.2);
+}
+
 span {
   display: block;
-  font-size: 16px;
-  padding: 10px;
+  font-size: 18px;
+  padding: 20px;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -137,14 +180,4 @@ span {
   to {
     opacity: 1;
   }
-}
-
-.header,
-ul {
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* Customized hover effect */
-li:hover img {
-  transform: scale(1.1);
 }

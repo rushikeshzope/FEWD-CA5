@@ -65,9 +65,11 @@ function BookList() {
           {loading ? <p>Loading books...</p> : (
             <ul>
               {filteredBooks.map(book => (
-                <li key={book.id}>
-                  {console.log(book)}
-                  <img src={book.imageLinks.smallThumbnail} alt={book.title} />
+                <li key={book.id} className="book-item">
+                  <div className="img-container">
+                    <div className="img-overlay"></div>
+                    <img src={book.imageLinks.smallThumbnail} alt={book.title} />
+                  </div>
                   <span>{book.title}</span>
                 </li>
               ))}
@@ -80,4 +82,3 @@ function BookList() {
 }
 
 export default BookList;
-
