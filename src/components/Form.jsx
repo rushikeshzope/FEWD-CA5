@@ -16,6 +16,7 @@ function Form() {
     console.log(values);
     setIsSuccess(true);
     sessionStorage.setItem("registrationSuccess", "true");
+    console.log("Registration success set in sessionStorage");
   };
 
   const handleGoBack = () => {

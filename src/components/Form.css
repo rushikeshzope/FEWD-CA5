@@ -35,11 +35,13 @@
 .formbutton {
     background-color: #4caf50;
     color: white;
-    padding: 10px 15px;
+    padding: 1em; /* Adjust padding as needed */
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width: 6vw;
+    width: auto; /* Use auto width for flexibility */
+    max-width: 100%; /* Ensure it doesn't exceed its container */
+    box-sizing: border-box; /* Include padding in the total width */
     transition: background-color 0.3s ease-in-out;
 }
 
@@ -80,25 +82,27 @@
     background-color: #1f5122;  
 }
 
-#gobackbutton{
+#gobackbutton {
     background-color: #2f7232;
     color: white;
-    padding: 10px 15px;
+    padding: 2% 3%; /* Adjust padding as needed */
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 360px;
+    margin-top: 700%; /* Adjust margin-top as needed */
+    margin-left: -200%;
     transition: background-color 0.3s ease-in-out;
-    width: 300px;
-    height: 100px;
+    width: 400%; /* Adjust width as needed */
+    max-width: 300px; /* Set a maximum width if desired */
+    height: 8vw; /* Adjust height using viewport units */
 }
 
-#gobackbutton button:hover {
-    background-color: #9ade9f; 
+#gobackbutton:hover {
+    background-color: #37a33d;
 }
 
-#endmessage{
-    font-size: 4em;
+#endmessage {
+    font-size: 4vw; /* Adjust font size using viewport units */
     position: absolute;
     top: 20%;
     left: 28%;

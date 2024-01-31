@@ -7,8 +7,8 @@ body {
 }
 
 .register-button {
-  padding: 12px 20px;
-  font-size: 18px;
+  padding: 2% 4%;
+  font-size: 2vw;
   background-color: #3498DB;
   color: #fff;
   border: none; 
@@ -16,8 +16,8 @@ body {
   cursor: pointer;
   outline: none;
   position: absolute;
-  top: 20px;
-  right: 100px;
+  top: 2%;
+  right: 4%;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -95,7 +95,6 @@ input:focus {
   top: 13px;
   border-radius: 50%;
 }
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -181,4 +180,159 @@ span {
     opacity: 1;
   }
 }
+
   
+
+@media screen and (max-width: 1095px) {
+  .logo {
+    left: 120px;
+    height: 40px;
+    width: 40px;
+  }
+  #kalvium-book {
+    left: 5px;
+    font-size: 1em;
+    top: 8px;
+  }
+
+  .search-bar {
+    margin-bottom: 10px;
+  }
+}
+
+/* Breakpoint 3: Small screens */
+@media screen and (max-width: 936px) {
+  .register-button {
+    top: 25px;
+    right: 30px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  input {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .logo {
+    left: 120px;
+    height: 40px;
+    width: 40px;
+  }
+  #kalvium-book {
+    left: 5px;
+    font-size: 1em;
+    top: 8px;
+  }
+
+}
+
+/* Breakpoint 4: Extra small screens */
+@media screen and (max-width: 768px) {
+  .register-button {
+    top: 25px;
+    right: 30px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  input {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .logo {
+    left: 120px;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .register-button {
+    top: 18px;
+    right: 30px;
+    padding: 6px 10px;
+    font-size: 18px;
+  }
+
+
+  input {
+    width: 90%;
+    max-width: 250px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .logo {
+    left: 120px;
+    height: 40px;
+    width: 40px;
+  }
+
+  #kalvium-book {
+    left: 5px;
+    font-size: 1em;
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .register-button {
+    top: 18px;
+    right: 30px;
+    padding: 6px 10px;
+    font-size: 15px;
+  }
+
+
+  input {
+    width: 40%;
+    max-width: 250px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .logo {
+    left: 80px;
+    height: 30px;
+    width: 30px;
+    top: 18px;
+  }
+
+  #kalvium-book {
+    left: 5px;
+    font-size: 0.7em;
+    top: 15px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .register-button {
+    top: 18px;
+    right: 30px;
+    padding: 6px 10px;
+    font-size: 15px;
+  }
+
+
+  input {
+    width: 30%;
+    max-width: 250px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .logo {
+    left: 80px;
+    height: 30px;
+    width: 30px;
+    top: 18px;
+  }
+
+  #kalvium-book {
+    left: 5px;
+    font-size: 0.7em;
+    top: 15px;
+  }
+}
