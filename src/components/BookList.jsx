@@ -4,15 +4,23 @@ import KalviumLogo from "../assets/KalviumLogo.png";
 import Form from "./Form";
 
 function BookList() {
+  // State for handling search term input
   const [searchTerm, setSearchTerm] = useState('');
+  // State for storing books data
   const [books, setBooks] = useState([]);
+  // State for indicating loading state while fetching data
   const [loading, setLoading] = useState(true);
+  // State for controlling the display of the registration form
   const [showForm, setshowForm] = useState(false);
+
+  // Event handler for updating search term
   const handleSearch = (event) => setSearchTerm(event.target.value);
 
+  // Effect for fetching books data on component mount
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // Fetch books data from API
         const response = await fetch('https://reactnd-books-api.udacity.com/books', {
           headers: {
             'Authorization': 'whatever-you-want'
@@ -21,6 +29,7 @@ function BookList() {
 
         if (!response.ok) throw new Error('Network response was not ok');
 
+        // Parse and set books data to state
         const data = await response.json();
         setBooks(data.books);
         setLoading(false);
@@ -30,13 +39,16 @@ function BookList() {
       }
     };
 
+    // Invoke the fetchData function
     fetchData();
   }, []);
 
+  // Filter books based on the search term
   const filteredBooks = books.filter(book =>
     book.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  // Event handler for displaying the registration form
   const HandleClick = () => {
     setshowForm(true);
   };
